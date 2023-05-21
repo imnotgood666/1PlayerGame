@@ -49,3 +49,4 @@ class SlotMachine(tk.Frame):
 root = tk.Tk()
 app = SlotMachine(master=root)
 app.mainloop()
+#收屍
