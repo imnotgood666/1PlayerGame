@@ -15,11 +15,11 @@ class SlotMachine(tk.Frame):
 
     def create_widgets(self):
         
-        self.numbers_label = tk.Label(self, font=("Arial", 40), text="0 0 0")
+        self.numbers_label = tk.Label(self, font=("Arial", 40), text="0 0 0")#初始畫面
         self.numbers_label.pack(pady=20)
 
 
-        self.spin_button = tk.Button(self, text="拉霸", font=("Arial", 16), command=self.spin)
+        self.spin_button = tk.Button(self, text="拉霸", font=("Arial", 16), command=self.spin)#按鈕
         self.spin_button.pack(pady=20)
     def spin(self):
             a= random.randint(1, 9)
