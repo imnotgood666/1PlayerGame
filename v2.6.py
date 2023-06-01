@@ -17,7 +17,7 @@ class SlotMachine(tk.Frame):
         
         self.numbers_label = tk.Label(self, font=("Arial", 40), text="0 0 0")
         self.numbers_label.pack(pady=20)
-        self.imgpath = "C:\\Users\\phant\\OneDrive\\文件\\GitHub\\1PlayerGame\\Gambling_chips.jpg"
+        self.imgpath = "C:\\Users\\phant\\OneDrive\\文件\\GitHub\\1PlayerGame\\Gambling_chips.gif"
         self.img = Image.open(self.imgpath)
         self.photo = ImageTk.PhotoImage(self.img)
 
