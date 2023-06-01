@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import random
 
+
 class SlotMachine(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
@@ -20,11 +21,15 @@ class SlotMachine(tk.Frame):
         self.spin_button.pack(pady=10)
 
     def spin(self):
-      
-        nums = [random.randint(1, 9) for i in range(3)]
+        a=0
+        def onUpdate(self):
+            nums = [random.randint(1, 9) for i in range(3)]
 
-        self.numbers_label.config(text=" ".join(map(str, nums)))
+            self.numbers_label.config(text=" 0 ".join(map(str, nums)))
+            if a < 30:
 
+                self.after(100, self.onUpdate )            
+                a=a+1
 
         if all(num == 1 for num in nums):
             messagebox.showinfo("Congratulations!", "贏了！一元復始")
@@ -49,4 +54,4 @@ class SlotMachine(tk.Frame):
 root = tk.Tk()
 app = SlotMachine(master=root)
 app.mainloop()
-#收屍
+

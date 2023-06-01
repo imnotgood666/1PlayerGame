@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import random
-
+from PIL import ImageTK , Image
 
 class SlotMachine(tk.Frame):
     r=0
@@ -17,20 +17,22 @@ class SlotMachine(tk.Frame):
         
         self.numbers_label = tk.Label(self, font=("Arial", 40), text="0 0 0")
         self.numbers_label.pack(pady=20)
-
+        self.imgpath = "C:\\Users\\phant\\OneDrive\\文件\\GitHub\\1PlayerGame\\Gambling_chips.jpg"
+        self.img = Image.open(imgpath)
+        self.photo = ImageTK.PhotoImage(img)
 
         self.spin_button = tk.Button(self, text="拉霸", font=("Arial", 16), command=self.spin)
         self.spin_button.pack(pady=20)
     def spin(self):
-            a= random.randint(1, 9)
-            b= random.randint(1, 9)
-            c= random.randint(1, 9)
+            a=  random.randint(1, 9)
+            b=  random.randint(1, 9)
+            c=  random.randint(1, 9)
             nums = [a,b,c]
-
+            
             self.numbers_label.config(text=" ".join(map(str, nums)))
             if SlotMachine.r < 40:
 
-                self.after(50, self.spin)            
+                self.after(35, self.spin)            
                 SlotMachine.r=SlotMachine.r+1        
             else:
                 if all(num == 1 for num in nums):
