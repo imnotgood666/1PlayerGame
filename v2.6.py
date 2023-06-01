@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import random
-from PIL import ImageTK , Image
+from PIL import ImageTk , Image
 
 class SlotMachine(tk.Frame):
     r=0
@@ -18,8 +18,8 @@ class SlotMachine(tk.Frame):
         self.numbers_label = tk.Label(self, font=("Arial", 40), text="0 0 0")
         self.numbers_label.pack(pady=20)
         self.imgpath = "C:\\Users\\phant\\OneDrive\\文件\\GitHub\\1PlayerGame\\Gambling_chips.jpg"
-        self.img = Image.open(imgpath)
-        self.photo = ImageTK.PhotoImage(img)
+        self.img = Image.open(self.imgpath)
+        self.photo = ImageTk.PhotoImage(self.img)
 
         self.spin_button = tk.Button(self, text="拉霸", font=("Arial", 16), command=self.spin)
         self.spin_button.pack(pady=20)
