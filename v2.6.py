@@ -28,7 +28,7 @@ class SlotMachine(tk.Frame):
             nums = [a,b,c]
 
             self.numbers_label.config(text=" ".join(map(str, nums)))
-            if SlotMachine.r < 40:
+            if SlotMachine.r < 40: #抽取變換40數
 
                 self.after(50, self.spin)            
                 SlotMachine.r=SlotMachine.r+1        
@@ -55,7 +55,7 @@ class SlotMachine(tk.Frame):
 
 
 root = tk.Tk()
-root.geometry('400x400')
+root.geometry('400x400')#邊框大小
 app = SlotMachine(master=root)
 app.mainloop()
 
