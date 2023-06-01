@@ -23,12 +23,12 @@ class SlotMachine(tk.Frame):
 
         
 
-        self.canvas = tk.Canvas(root, width=20, height=700,bd=0,highlightthickness=0)
-        self.canvas.create_image(700, 500, image=self.photo)
-        self.canvas.pack()
-        self.entry = tk.Entry(root, insertbackground='blue',highlightthickness=2)
-        self.entry.pack()
-        self.canvas.create_window(100, 50 , width = 100, height = 20, window = self.entry)
+        #self.canvas = tk.Canvas(root, width=20, height=700,bd=0,highlightthickness=0)
+        #self.canvas.create_image(700, 500, image=self.photo)
+        #self.canvas.pack()
+        #self.entry = tk.Entry(root, insertbackground='blue',highlightthickness=2)
+        #self.entry.pack()
+        #self.canvas.create_window(100, 50 , width = 100, height = 20, window = self.entry)
 
 
 
@@ -71,4 +71,3 @@ root = tk.Tk()
 root.geometry('400x400')
 app = SlotMachine(master=root)
 app.mainloop()
-
