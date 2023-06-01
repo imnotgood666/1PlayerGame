@@ -21,6 +21,14 @@ class SlotMachine(tk.Frame):
         self.img = Image.open(self.imgpath)
         self.photo = ImageTk.PhotoImage(self.img)
 
+        print("fso")
+
+        self.canvas = tk.Canvas(root, width=20, height=700,bd=0,highlightthickness=0)
+        self.canvas.create_image(700, 500, image=self.photo)
+        self.canvas.pack()
+        self.entry = tk.Entry(root, insertbackground='blue',highlightthickness=2)
+        self.entry.pack()
+        self.canvas.create_window(100, 50 , width = 100, height = 20, window = self.entry)
         self.spin_button = tk.Button(self, text="拉霸", font=("Arial", 16), command=self.spin)
         self.spin_button.pack(pady=20)
     def spin(self):
